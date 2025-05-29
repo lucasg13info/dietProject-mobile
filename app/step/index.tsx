@@ -6,7 +6,7 @@ import { z } from 'zod';
 import { Header } from '../../app-example/components/header/index';
 import { Input } from '../../app-example/components/input/index';
 import { router } from 'expo-router'
-
+import { useDataStore } from "../../store/data"
 
 
 const schema = z.object({
@@ -25,14 +25,24 @@ export default function Step(){
         resolver: zodResolver(schema)
     })
 
+    const setPageOne = useDataStore(state =>state.setPageOne)
+    
 
     function handleCreate(data:FormData){
-        console.log(data)
-        router.push("/create")
+        console.log("Passando dados de uma pagina para outra")
+        
+        setPageOne({
+            name: data.name,
+            weight: data.weight,
+            age: data.age,
+            height: data.height
+        
+    })
+    
+
+    router.push("/create")
+
     }
-
-
-
 
 
     return(
