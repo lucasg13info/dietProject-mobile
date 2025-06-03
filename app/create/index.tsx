@@ -1,10 +1,12 @@
 import { colors } from '@/app-example/constants/colors';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { z } from 'zod';
 import { Header } from '../../app-example/components/header';
 import { Select } from '../../app-example/components/input/select';
+import { useDataStore } from '../../store/data'
+import { router } from 'expo-router'
 
 
 
@@ -25,6 +27,8 @@ export default function Create() {
           resolver: zodResolver(schema)
       })
 
+  const setPageTwo = useDataStore(state => state.setPageTwo)
+
   const genderOptions = [
         {label: "Masculino", value: "Masculino"},
         {label: "Feminino", value: "Feminino"}
@@ -44,6 +48,18 @@ export default function Create() {
     { label: 'Definição', value: 'Definição' },
   ]
 
+
+
+  //Function to get all informations from the form
+  function handleCreate(data: FormData){
+    setPageTwo({
+      level: data.level,
+      gender: data.gender,
+      objective: data.objective
+    })
+
+    router.push("/nutrition")
+  }
 
 
  return (
@@ -68,7 +84,7 @@ export default function Create() {
       <Select
         control={control}
         name= "level"
-        placeholder="Selecione o seu sexo"
+        placeholder="Selecione seu nivel de atividade fisica"
         error={errors.level?.message}
         options={levelOptions}
       />
@@ -76,11 +92,16 @@ export default function Create() {
       <Select
         control={control}
         name= "objective"
-        placeholder="Selecione o seu sexo"
+        placeholder="Selecione seu objetivo"
         error={errors.objective?.message}
         options={objectiveOptions}
       />
 
+
+      <Pressable style={styles.button} onPress={handleSubmit(handleCreate)}>
+        <Text style={styles.buttonText}>Avancar </Text>
+
+      </Pressable>
       
 
       
@@ -107,6 +128,20 @@ const styles = StyleSheet.create({
     content:{
       paddingLeft:16,
       paddingRight: 16
-    }
+    },
+    button:{
+    backgroundColor: colors.blue,
+    width: '100%',
+    height: 40,
+    borderRadius: 4,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 34,
+  },
+  buttonText:{
+    color: colors.white,
+    fontSize: 16,
+    fontWeight: 'bold',
+  }
 
 })

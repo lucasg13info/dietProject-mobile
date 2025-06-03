@@ -1,6 +1,9 @@
 import { Link } from 'expo-router';
 import { Image, Pressable, StyleSheet, Text, View } from 'react-native';
 import { colors } from '../app-example/constants/colors';
+
+
+
  
 export default function Index(){
   return(
@@ -20,6 +23,12 @@ export default function Index(){
         <Text style={styles.buttonText}>Gerar dieta</Text>
       </Pressable>
       </Link>
+
+    
+
+
+
+
     </View>
   )
 }
