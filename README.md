@@ -66,7 +66,8 @@ Join our community of developers creating universal apps.
 
 
 <p align="center">
-  <img src="pictures/1.png" alt="img1" width="200"/>
+
+  <img src="./pictures/1.png" alt="img1" width="200"/>
   <img src="pictures/2.png" alt="img2" width="200"/>
   <img src="pictures/3.png" alt="img3" width="200"/>
   <img src="pictures/4.png" alt="img4" width="200"/>
