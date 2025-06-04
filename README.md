@@ -65,11 +65,12 @@ Join our community of developers creating universal apps.
 ![App Screenshot](/pictures/5.jpg)
 
 
-<p align="center">
+<h3 align="center">📸 App Screenshots</h3>
 
-  <img src="./pictures/1.png" alt="img1" width="200"/>
-  <img src="pictures/2.png" alt="img2" width="200"/>
-  <img src="pictures/3.png" alt="img3" width="200"/>
-  <img src="pictures/4.png" alt="img4" width="200"/>
-  <img src="pictures/5.png" alt="img5" width="200"/>
+<p align="center">
+  <img src="/pictures/1.jpg" width="200" />
+  <img src="/pictures/2.jpg" width="200" />
+  <img src="/pictures/3.jpg" width="200" />
+  <img src="/pictures/4.jpg" width="200" />
+  <img src="/pictures/5.jpg" width="200" />
 </p>
