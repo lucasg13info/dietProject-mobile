@@ -1,4 +1,16 @@
-# Welcome to your Expo app 👋
+# Welcome to the Diet Project 👋
+
+
+<h3 align="center">📸 App Screenshots</h3>
+
+<p align="center">
+  <img src="/pictures/1.jpg" width="200" />
+  <img src="/pictures/2.jpg" width="200" />
+  <img src="/pictures/3.jpg" width="200" />
+  <img src="/pictures/4.jpg" width="200" />
+  <img src="/pictures/5.jpg" width="200" />
+</p>
+
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
@@ -58,19 +70,5 @@ Join our community of developers creating universal apps.
 - Backend project: Update IP local to request in the Gemini API in the backend
 - Mobile project: FGo the the file services -> api.ts and update the Ip to request the Gemini API.
 
-![App Screenshot](/pictures/1.jpg)
-![App Screenshot](/pictures/2.jpg)
-![App Screenshot](/pictures/3.jpg)
-![App Screenshot](/pictures/4.jpg)
-![App Screenshot](/pictures/5.jpg)
 
 
-<h3 align="center">📸 App Screenshots</h3>
-
-<p align="center">
-  <img src="/pictures/1.jpg" width="200" />
-  <img src="/pictures/2.jpg" width="200" />
-  <img src="/pictures/3.jpg" width="200" />
-  <img src="/pictures/4.jpg" width="200" />
-  <img src="/pictures/5.jpg" width="200" />
-</p>
