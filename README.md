@@ -50,3 +50,10 @@ Join our community of developers creating universal apps.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
 # dietProject-mobile
 # dietProject-backend
+
+
+## To run de project adjust the files bellow:
+
+- Backend project: Create key to use the Gemini API.
+- Backend project: Update IP local to request in the Gemini API in the backend
+- Mobile project: FGo the the file services -> api.ts and update the Ip to request the Gemini API.
